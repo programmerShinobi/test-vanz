@@ -10,7 +10,6 @@ function findDepth(tree, node) {
         }
 
         const children = tree.filter(obj => obj.upline === current.id);
-        console.log(tree);
         children.forEach(child => {
             queue.push({ id: child.id, depth: current.depth + 1 });
         });
